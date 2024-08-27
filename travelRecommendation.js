@@ -32,7 +32,7 @@ const displayDestination = () => {
           <h1 class="shadow-pop-bl header-main">
           Share Your Travel Tales
           </h1>
-          <p class="shadow-pop-bl p-main">Enter your thoughts, experiences, or any memorable moments from your travels</p>
+          <p class=" p-main">Enter your thoughts, experiences, or any memorable moments from your travels</p>
 
           <div class="socmed-main">
             <a href="https://www.facebook.com/arishavellekarl.villanueva" class="fa-brands fa-facebook-f animate-button"></a>
@@ -106,7 +106,7 @@ const displayDestination = () => {
           <h1 class="shadow-pop-bl header-main">
           Share Your Travel Tales
           </h1>
-          <p class="shadow-pop-bl p-main">Enter your thoughts, experiences, or any memorable moments from your travels</p>
+          <p class=" p-main">Enter your thoughts, experiences, or any memorable moments from your travels</p>
 
           <div class="socmed-main">
             <a href="https://www.facebook.com/arishavellekarl.villanueva" class="fa-brands fa-facebook-f animate-button"></a>
@@ -179,7 +179,7 @@ const clearDestination = () => {
       <h1 class="shadow-pop-bl header-main">
         Share Your Travel Tales
       </h1>
-      <p class="shadow-pop-bl p-main">Enter your thoughts, experiences, or any memorable moments from your travels</p>
+      <p class=" p-main">Enter your thoughts, experiences, or any memorable moments from your travels</p>
 
       <div class="socmed-main">
         <a href="https://www.facebook.com/arishavellekarl.villanueva"
