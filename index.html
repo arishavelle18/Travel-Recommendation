@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="./css/travelRecommendation.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
@@ -22,9 +28,9 @@
         <h1>Travel Goer</h1>
       </div>
       <ul class="nav-button">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./travelAboutUs.html">About Us</a></li>
-        <li><a href="./travelContactUs.html">Contact Us</a></li>
+        <li class="animate-button"><a href="./index.html">Home</a></li>
+        <li class="animate-button"><a href="./travelAboutUs.html">About Us</a></li>
+        <li class="animate-button"><a href="./travelContactUs.html">Contact Us</a></li>
       </ul>
       <div class="search-button">
         <div class="search-flex">
@@ -34,26 +40,43 @@
           </span>
         </div>
 
-        <button class="src-Btn">Search</button>
-        <button class="clr-Btn">Clear</button>
+        <button class="src-Btn animate-button" id="search-destination">Search</button>
+        <button class="clr-Btn animate-button" onclick="clearDestination()">Clear</button>
       </div>
     </nav>
-    <div class="main">
+    <!-- <div class="main-right-container"> -->
+    <div class="main real-main">
       <h1 class="shadow-pop-bl header-main">
         Share Your Travel Tales
       </h1>
       <p class="shadow-pop-bl p-main">Enter your thoughts, experiences, or any memorable moments from your travels</p>
 
       <div class="socmed-main">
-        <a href="https://www.facebook.com/arishavellekarl.villanueva" class="fa-brands fa-facebook-f"></a>
-        <a href="https://www.linkedin.com/in/arishavelle-karl-villanueva-276574241/" class="fa-brands fa-linkedin"></a>
-        <a href="https://github.com/arishavelle18" class="fa-brands fa-github"></a>
+        <a href="https://www.facebook.com/arishavellekarl.villanueva"
+          class="fa-brands fa-facebook-f animate-button"></a>
+        <a href="https://www.linkedin.com/in/arishavelle-karl-villanueva-276574241/"
+          class="fa-brands fa-linkedin animate-button"></a>
+        <a href="https://github.com/arishavelle18" class="fa-brands fa-github animate-button"></a>
       </div>
-      <button class="book-main">Book Now</button>
+      <button class="book-main animate-button" onclick="booking()">Book Now</button>
+    </div>
+    <!-- <div class="rightSide">
+        <div class="image-travel">
+          <button><i class="fa-solid fa-arrow-left"></i></button>
+          <img src=" ./image/travel.jpg" alt="" width="500">
+          <button><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="image-description">
+          <h2>Sydney</h2>
+          <p>A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge</p>
+        </div>
+
+      </div> -->
     </div>
 
-    <div class="footer"></div>
+    <div class=" footer"></div>
   </section>
+  <script src="./travelRecommendation.js"></script>
 </body>
 
 </html>

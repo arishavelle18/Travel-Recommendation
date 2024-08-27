@@ -3,12 +3,14 @@
   margin: 0;
 }
 
-section {
-  height: 100vh;
+body {
+  height: 100%;
+  width: 100%;
 }
-section::before {
+body::before {
   background-image: url("../image/travel.jpg");
   background-size: cover;
+  background-attachment: fixed;
   content: "";
   position: absolute;
   inset: 0;
@@ -20,7 +22,7 @@ section::before {
   display: grid;
   grid:
     "header" auto
-    "main" 1fr
+    "main rightSide" 1fr
     "footer" auto
     / 1fr;
   gap: 8px;
@@ -36,6 +38,7 @@ section::before {
   color: white;
   font-weight: bold;
   overflow: auto;
+  margin-bottom: 1rem;
 }
 
 .title {
@@ -67,7 +70,7 @@ section::before {
   color: black;
   border-radius: 50px;
   padding: 0.5rem 1rem;
-  margin: 0.5rem;
+  margin: 0.5rem 2rem;
 }
 
 .src-Btn {
@@ -77,6 +80,7 @@ section::before {
   padding: 0.5rem 1rem;
   border-radius: 50px;
   margin: 0 0.5rem;
+  cursor: pointer;
 }
 .clr-Btn {
   background-color: #b15f39;
@@ -85,6 +89,7 @@ section::before {
   padding: 0.5rem 1rem;
   border-radius: 50px;
   margin: 0 0.5rem;
+  cursor: pointer;
 }
 .search-button .destination:focus {
   outline: none;
@@ -99,10 +104,10 @@ section::before {
 }
 .main {
   isolation: isolate;
+  width: 50%;
   grid-area: main;
   height: 70vh;
   margin: auto;
-  width: 80%;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -119,22 +124,27 @@ section::before {
 }
 .socmed-main {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 2rem;
 }
 .socmed-main a {
   background-color: transparent;
   border: none;
-  margin-right: 1.5rem;
+  margin-right: 0.5rem;
+  background-color: #b15f39;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
   font-size: 3rem;
   cursor: pointer;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .book-main {
   padding: 0.5rem 1rem;
   background-color: transparent;
   border: 1px solid transparent;
-  font-weight: bolde;
+  font-weight: bolder;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   background-color: #b15f39;
@@ -143,6 +153,48 @@ section::before {
   cursor: pointer;
 }
 
+.rightSide {
+  isolation: isolate;
+  grid-area: rightSide;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+}
+.main-right-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.image-travel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem 2rem;
+  margin: 1rem 2rem;
+}
+.image-travel button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.image-description h2 {
+  margin-bottom: 1rem;
+}
+.image-description p {
+  margin-bottom: 1rem;
+}
+.image-description {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .footer {
   isolation: isolate;
   grid-area: footer;
@@ -151,50 +203,14 @@ section::before {
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
-
-/* main */
-.shadow-pop-bl {
-  -webkit-animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-  animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+.animate-button:hover {
+  animation-name: scaling;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
 }
 
-@-webkit-keyframes shadow-pop-bl {
-  0% {
-    -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-    -webkit-transform: translateX(0) translateY(0);
-    transform: translateX(0) translateY(0);
-  }
+@keyframes scaling {
   100% {
-    -webkit-box-shadow: -1px 1px #3e3e3e, -2px 2px #3e3e3e, -3px 3px #3e3e3e,
-      -4px 4px #3e3e3e, -5px 5px #3e3e3e, -6px 6px #3e3e3e, -7px 7px #3e3e3e,
-      -8px 8px #3e3e3e;
-    box-shadow: -1px 1px #3e3e3e, -2px 2px #3e3e3e, -3px 3px #3e3e3e,
-      -4px 4px #3e3e3e, -5px 5px #3e3e3e, -6px 6px #3e3e3e, -7px 7px #3e3e3e,
-      -8px 8px #3e3e3e;
-    -webkit-transform: translateX(8px) translateY(-8px);
-    transform: translateX(8px) translateY(-8px);
-  }
-}
-@keyframes shadow-pop-bl {
-  0% {
-    -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-    -webkit-transform: translateX(0) translateY(0);
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    -webkit-box-shadow: -1px 1px #3e3e3e, -2px 2px #3e3e3e, -3px 3px #3e3e3e,
-      -4px 4px #3e3e3e, -5px 5px #3e3e3e, -6px 6px #3e3e3e, -7px 7px #3e3e3e,
-      -8px 8px #3e3e3e;
-    box-shadow: -1px 1px #3e3e3e, -2px 2px #3e3e3e, -3px 3px #3e3e3e,
-      -4px 4px #3e3e3e, -5px 5px #3e3e3e, -6px 6px #3e3e3e, -7px 7px #3e3e3e,
-      -8px 8px #3e3e3e;
-    -webkit-transform: translateX(8px) translateY(-8px);
-    transform: translateX(8px) translateY(-8px);
+    transform: scale(1.2);
   }
 }
